@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>File Processed Results</title>
+    </h:head>
+    <h:body>
+        <h:outputText value="The number of characters in the file is #{jSFBean.totalChars}."/>
+        <br></br>
+        <h:outputText value="The number of words in the file is #{jSFBean.totalWords}."/>
+        <br></br>
+        <h:outputText value="The sum of all numbers in the file is #{jSFBean.sumOfNumbers}."/>
+        <br></br>
+        <br></br>
+        <h:outputText value="Original Text File Contents:"/>
+        <br></br>
+        <br></br>
+        <h:outputText value="#{jSFBean.fileContent}" escape="false"/>
+        <br></br>
+
+        <h:form>
+            <h:commandButton value="Go Back" action="#{jSFBean.welcome}"/>
+        </h:form>
+
+    </h:body>
+</html>
+

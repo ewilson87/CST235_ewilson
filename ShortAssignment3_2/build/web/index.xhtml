@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Customer Billing Validation</title>
+    </head>
+    <style>
+
+        *{
+            font-family: Arial, sans-serif;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .valid {
+            color: green;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+
+    <body>
+        <form action="/ShortAssignment3_2/PaymentValidator" method="post">
+            <h3>Enter your billing information</h3>
+
+            <label>First Name:
+                <input type="text" name="fname" pattern="[a-zA-Z-]+" title="Name can only contain letters and hyphens." required="true"/>
+            </label>
+
+            <label>Last Name:
+                <input type="text" name="lname" pattern="[a-zA-Z-]+" title="Name can only contain letters and hyphens." required="true"/>
+            </label>
+
+            <label>Address:
+                <input type="text" name="address" required="true"/>
+            </label>
+
+            <label>City:
+                <input type="text" name="city" required="true"/>
+            </label>
+
+            <label>State:
+                <input type="text" name="state" pattern="[a-zA-Z].{2,2}+" title="State must have two letters." required="true"/>
+            </label>
+
+            <label>Zip:
+                <input type="number" name="zip" pattern="[0-9].{5,5}+" title="Zip code must be 5 digits." required="true"/>
+            </label>
+
+            <label>Card Number:
+                <input type="number" name="cardNumber" pattern="[0-9].{16,16}+" title="Card number must contain 16 digits." required="true"/>
+            </label>
+
+            <label>
+                <label>
+                    <label>Two digit expiration month:
+                        <input type="number" name="expMonth" min="1" max="12" pattern="[0-9].{2,2}+" title="Month must be between 1-12." required="true"/>
+                    </label>
+                    <label>Two digit expiration year:
+                        <input type="number" name="expYear" min="00" max="99" pattern="[0-9].{2,2}+" title="Please enter the last two digits of the year." required="true"/>
+                    </label>
+                </label>
+            </label>
+            <label>Three digit security code:
+                <input type="number" name="securityCode" max="999" pattern="[0-9].{3,3}+" title="3 digit number on the back of the card." required="true"/>
+            </label>
+
+            <input type="submit" value="Submit"/>
+
+        </form>
+    </body>
+</html>
+

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!--
+ Program: CST-235 Short Project 4
+ File: index.html
+ Summary: Welcome page of Short Assignment 4 that navigates the user through a series of questions leading to a final product recommendation
+ Author: Evan Wilson
+ Date: September 2nd, 2018
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <!-- Sets background color and border  -->
+        <h:body style="background-color: lightblue; border: solid black medium">
+            <!-- Sets title of the page  -->
+            <title>Short Assignment 4</title>
+            <!-- Header tags, centered on screen  -->
+            <center>
+                <h1 >CST-235 Short Assignment 4</h1>
+                <h2>Written by: Evan Wilson</h2>
+            </center>
+        </h:body>
+    </h:head>
+    <h:body>
+
+        <br />
+        <!-- Paragraph introduction to the user. Sets font as bold, 16pt -->
+        <p><font size="16"><b>In this application you will be asked a series of binary answer questions. After the fourth question, you will be
+                    redirected to an applicable product page.</b></font></p>
+        <p>Note: Answering question 4 will redirect to an external website product page.</p>
+        <center>
+            <!-- Main navigational tool used in this application. outcome is the name of the JSF page that will be loaded by the button
+            value is what is shown on the button
+            style sets the size of the button font and the border-->
+            <h:button outcome="Q1" value="Begin" style="border: solid greenyellow medium; font-size:40px"/>
+        </center>
+        <br />
+        <p></p>
+    </h:body>
+</html>
+
